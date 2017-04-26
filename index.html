@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSV File Spliter & SQL Converter</title>
+    </head>
+    <body>
+
+<table>
+	<tr>
+		<td>
+
+		<h2>CSV File Spliter & SQL Converter</h2>
+		
+
+				<!-- Input form begin -->
+
+				<form enctype="multipart/form-data" action="split.php"  method="post" >
+					<fieldset>
+					<p>
+					<i>This application takes a .csv file and split it to several .csv files or .sql files with number of rows of each file based on the <b># of rows per page</b> value</i>
+					</p>
+					    Convert to SQL?
+						<input type="checkbox" name="tosql" value="checked" /><br/>
+						<small  style='color:red'>First row of .csv file contains header</small><br/>
+						SQL table name: 
+						<input type="text"	name="table_name" size="30" /><br/><br/>
+						<br /><br />
+						# of Rows Per Page<br />
+						<input type="number"	name="perpage" size="20" /><br/><br/>
+				          CSV file:<br/>
+						<input type="file"	name="fromfile" size="20" /><br/><br/>
+						
+						<input type="submit" value="    Split & Convert   " />
+					</fieldset>
+				</form>
+
+				<!-- Input form end -->
+		</td>
+		<td>
+			
+			<h2>CSV File Spliter</h2>
+			
+
+					<!-- Input form begin -->
+
+					<form enctype="multipart/form-data" action="split_csv.php"  method="post" >
+						<fieldset>
+						<p>
+							<i>This application takes a .csv file and split it into several .csv files with number of rows of each file based on the <b># of rows per page</b> value</i>
+						</p>
+							# of Rows Per Page<br />
+							<input type="number"	name="perpage" size="20" /><br/><br/>
+						      CSV file:<br/>
+							<input type="file"	name="fromfile" size="20" /><br/><br/>
+						
+							<input type="submit" value="    Split   " />
+						<br/> <br/><br/><br/> <br/><br/><br/> <br/>
+						</fieldset>
+					</form>
+
+					<!-- Input form end -->
+				
+		</td>
+
+	<td>
+
+		<h2>CSV To SQL Converter</h2>
+		
+
+				<!-- Input form begin -->
+
+				<form enctype="multipart/form-data" action="tosql.php"  method="post" >
+					<fieldset>
+					<p>
+					<i>This application takes a .csv file  and convert it to.sql files with table name</i>
+					</p>
+						<small style='color:red'>First row of .csv file contains header</small><br/>
+						SQL table name: 
+						<input type="text"	name="table_name" size="30" /><br/><br/>
+				          CSV file:<br/>
+						<input type="file"	name="fromfile" size="20" /><br/><br/>
+						
+						<input type="submit" value="    Convert   " />
+						<br/> <br/><br/><br/> <br/><br/><br/>
+						<small style='color:blue'>
+								This conversion will create the SQL table
+						</small><br/>
+					</fieldset>
+				</form>
+
+				<!-- Input form end -->
+		</td>
+
+	</tr>
+</table>
+
+
+
+
+</body>
+</HTML>
